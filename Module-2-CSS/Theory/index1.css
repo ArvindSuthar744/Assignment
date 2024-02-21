@@ -28,37 +28,7 @@
     margin: 30px auto;
     border: 2px solid black;
 }
-.flex{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    text-align: center;
-    gap: 5px;
-}
-.child-1{
-    width: 20%;
-    height: 90px;
-    background-color: cadetblue;
-    color: white;
-    border: 2px solid black;
-}
-.child-2{
-    width: 20%;
-    height: 90px;
-    background-color: coral;
-    color: white;
-    border: 2px solid black;
-}
-.child-3{
-    width: 20%;
-    height: 90px;
-    background-color: slateblue;
-    color: white;
-    border: 2px solid black;
-}
+
 h2{
     padding-block: 10px;
 }
