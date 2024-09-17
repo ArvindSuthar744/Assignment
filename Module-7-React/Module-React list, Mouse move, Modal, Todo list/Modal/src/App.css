@@ -1,0 +1,43 @@
+*{
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal{
+  padding: 20px 20px;
+}
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-div{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+.inp{
+  width: 300px;
+  padding: 7px 10px;
+}
+.input-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.login-btn{
+  width: 100%;
+  padding: 7px 0px;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0px 0px 0px;
+}
+.btn{
+  border: 0px;
+}
