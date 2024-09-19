@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Assignment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -541,28 +542,170 @@
 
 
         <h2>(Array and object Question)</h2>
-    
         
+        
+        
+        
+        
+        
+        <h2>(Create program Question)</h2>
 
+        <h3>Create a hide show password functionalities.</h3>
 
+        <p><b>Ans =></b>
+            <div class="inputs">
+                <input type="password" name="" id="inp1"  value="">
+                <input type="checkbox" name="" onclick="test()">hide & Show
+            </div>
+            <pre>
+                function test(){
+                    let inp1 = document.getElementById('inp1')   
+    
+                    if (inp1.type === "password") {
+                    inp1.type = "text";
+                }
+                else {
+                    inp1.type = "password";
+                }
+                    console.log(inp1);
+                }
+            </pre>
+        </p>
 
+        <hr>
 
+        <h3>Create basic math operation in JS</h3>
 
+        <p><b>Ans =></b> 
+            <div class="calulater">
+                <h3>Calculater & Math Operation</h3>
+                <form>
+                    <label for="">1st Number</label>
+                    <input type="number" id="inp11">
+                    <label for="">2st Number</label>
+                    <input type="number" id="inp22">
+                </form>
+                <div class="parts">
+                    <div class="btns">
+                        <button id="add" onclick="add()">+</button>
+                        <button id="sub" onclick="sub()">-</button>
+                        <button id="mal" onclick="mal()">*</button>
+                        <button id="div" onclick="div()">/</button>
+                        <button id="mod" onclick="mod()">%</button>
+                    </div>
+                    <div class="result">
+                        <!-- <h1 id="res"></h1> -->
+                    </div>
+                </div>
+            </div>
+            <pre>
+                let inp11 = document.getElementById('inp11')
+                let inp22 = document.getElementById('inp22')
+                let res = document.getElementById('res')
+            
+                
+            function add(){
+                res.innerHTML = parseInt(inp11.value) + parseInt(inp22.value);
+                console.log(res)   
+            }
+            function sub(){
+                res.innerHTML = parseInt(inp11.value) - parseInt(inp22.value);
+                console.log(res)   
+            }
+            function mal(){
+                res.innerHTML = parseInt(inp11.value) * parseInt(inp22.value);
+                console.log(res)   
+            }
+            function div(){
+                res.innerHTML = parseInt(inp11.value) / parseInt(inp22.value);
+                console.log(res)   
+            }
+            function mod(){
+                res.innerHTML= parseInt(inp11.value) % parseInt(inp22.value);
+                console.log(res)   
+            }
+            </pre>
 
+        </p>
 
+        <hr>
+
+        <h3>Create result</h3>
+
+        <p><b>Ans =></b> 
+            <div class="result">
+                <h3>Marksheet  for information Technology</h3>
+                <h4>Enter Mark</h4>
+                <div class="div">
+                    <div class="box-1">
+                        <label for="">1. C language</label>
+                        <input type="number" id="c">
+                    </div>
+                    <div class="box-2">
+                        <label for="">2. C++ language</label>
+                        <input type="number" id="cplus">
+                    </div>
+                    <div class="box-3">
+                        <label for="">3. Database</label>
+                        <input type="number" id="database">
+                    </div>
+                    <div class="box-4">
+                        <label for="">4. HTML</label>
+                        <input type="number" id="html">
+                    </div>
+                    <div class="box-5">
+                        <label for="">5. CSS</label>
+                        <input type="number" id="css">
+                    </div>
+                    <div class="box-6">
+                        <label for="">6. Php</label>
+                        <input type="number" id="php">
+                    </div>
+                    <div class="box-7">
+                        <label for="">7. Core Java</label>
+                        <input type="number" id="java">
+                    </div>
+                </div>
+                <button id="resbtn" onclick="result()">Result</button>
+                <div class="div-1">
+                    <h4 id="res"></h4>
+                    <h4 id="per"></h4>
+
+                </div>
+            </div>
+
+        </p>
 
     <script>
+           let c = document.getElementById('c');
+           let cplus = document.getElementById('cplus');
+           let database = document.getElementById('database');
+           let html = document.getElementById('html');
+           let css = document.getElementById('css');
+           let php = document.getElementById('php');
+           let java = document.getElementById('java');
+           let resbtn = document.getElementById('resbtn');
+           let res = document.getElementById('res');
+           let per = document.getElementById('per');
 
-        var f = 1 ;
-        var i ;
-        var num = 3;
-        for(i=1; i <= num; i++){
-            f = f * i ;
-        }
-            console.log(f);
-            
-      
+         
 
+           function result(){
+
+            let res2 = parseInt(c.value) + parseInt(cplus.value) + parseInt(database.value) + parseInt(html.value)
+                  + parseInt(css.value) + parseInt(php.value) + parseInt(java.value);
+
+           console.log("Here",  res2)
+
+            let per2 = parseInt(res2) / 7 ;
+
+            res.innerHTML = `Total is : ${res2}/350`
+            per.innerHTML = `Percentage is : ${per2}%`
+            console.log(res);
+            console.log(per);
+           }
+
+           
         
     </script>
 
