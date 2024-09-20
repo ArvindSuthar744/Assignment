@@ -1,0 +1,29 @@
+{
+  "Students": [
+    {
+      "name": "arvind",
+      "email": "arvind@gmail.com",
+      "id": "0219"
+    },
+    {
+      "name": "arvind1",
+      "email": "arvind1@gmail.com",
+      "id": "02a8"
+    },
+    {
+      "id": "5ae0",
+      "name": "Nirav Sir",
+      "email": "Niravsir@gmail.com"
+    },
+    {
+      "id": "a7cd",
+      "name": "Nirav Sir",
+      "email": "Niravsir@gmail.com"
+    },
+    {
+      "id": "7257",
+      "name": "arvind3",
+      "email": "arvind3@gmail.com"
+    }
+  ]
+}
