@@ -127,7 +127,13 @@
 
     <h2>Q.9 Write a JavaScript program to calculate days left until next Christmas?</h2>
 
-    <p><b>Ans =></b></p>
+    <p><b>Ans =></b>
+        let Christmas = new Date('December 25,2024'); <br>
+        let todayDate = new Date('March 6,2024') <br>
+        let count = Christmas.getTime() - todayDate.getTime(); <br>
+        let daycount = count/(1000*60*60*24); <br>
+        console.log(daycount); <br>
+    </p>
 
     <hr>
 
@@ -185,10 +191,15 @@
 
     <h2>Q.14 Write a JavaScript exercise to get the extension of a filename.?</h2>
 
-    <p><b>Ans =></b></p>
+    <p><b>Ans =></b>
+        function getfileExtension(filename){ <br>
+        let extension = filename.split('.'); <br>
+        console.log(extension[1]); <br>
+        }
+        getfileExtension('assesment.js'); <br>
+    </p>
 
     <hr>
-
 
 
     <h2>Q.15 What is the result of the expression (5 > 3 && 2 < 4)?</h2>
@@ -413,7 +424,10 @@
 
         <h2>Q.30 What are the looping structures in JavaScript? Any one Example?</h2>
         
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            JavaScript Loops are powerful tools for performing repetitive tasks efficiently. Loops in
+            JavaScript execute a block of code again and again while the condition is true.
+        </p>
         
         <hr>
 
@@ -432,7 +446,8 @@
 
         <h2>Q.32 Write to print factorial of given number?</h2>
     
-        <p><b>Ans =></b>var f = 1 ;
+        <p><b>Ans =></b>
+                        var f = 1 ;
                         var i ;
                         var num = 3;
                         for(i=1; i <= num; i++){
@@ -446,28 +461,58 @@
 
         <h2>Q.33 Write to print Fibonacci series up to given numbers?</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            <!-- let prenum = 0; <br>
+            let prenum1 = 1; <br>
+            let nextnum = prenum+prenum1; <br>
+            for (let i = 1; i <= 100; i++) <br>
+                { nextnum=prenum + prenum1; <br>
+                prenum=prenum1; <br>
+                prenum1=nextnum; <br>
+                console.log(nextnum); } <br>  -->
+        </p>
 
         <hr>
 
 
         <h2>Q.34 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            <!-- let num = 64728; <br>
+            let j = num.toString() <br>
+            for (i = j.length;i>= 0;i--){ <br>
+            parseInt(console.log(j[i])); <br>
+            } <br> -->
+        </p>
 
         <hr>
 
 
         <h2>Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            <!-- let a = 23433; <br>
+            let c = Array.from(a.toString(),Number) <br>
+            let sum = 0; <br>
+            console.log(c) <br>
+            for(i = 0;i<= c.length; i++) <br>
+                { <br>
+                sum = sum + c[i]; <br>
+                console.log(sum); <br>
+                } <br> -->
+        </p>
 
         <hr>
 
         
         <h2>Q.36 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -5) in JS?</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            <!-- var a = 474689;
+            var b = Array.from(a.toString(),Number);
+            var j = b.length-1;
+            for(let i = 0; i <= b.length ; i++){ console.log(b[i]+b[j]); j--; }  -->
+        </p>
 
         <hr>
         
@@ -480,7 +525,35 @@
             5 1 5 25 125
         </h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let n = 5; <br>
+
+            let str = "" <br>
+            for (let i = 1; i <= 5; i++) { <br>
+                for (let j = 1; j <= n; j++) <br>
+                    { <br>
+                    if (((j == 4) || (j == 5)) && ((i == 2) || (i == 3) || (i == 4) || (i ==
+                    5))) <br> { <br>
+                    if (j == 4) { <br>
+                    let a = Math.pow(i, 2) <br>
+                    str = str + `${a}` <br>
+                    } <br>
+                    else{ <br>
+                    let b = Math.pow(i, 3) <br>
+                    str = str + `${b}` <br>
+                    } <br>
+                    } <br>
+                    else if (j == 2) { <br>
+                    str = str + "1" <br>
+                    } <br>
+                    else { <br>
+                    str = str + `${i}` <br>
+                    } <br>
+                    } <br>
+                    str = str + "\n" <br>
+                    } <br>
+                    console.log(str);
+        </p>
 
         <hr>
 
@@ -491,7 +564,22 @@
             1 0 1 0
             1 0 1 0 1</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let n = 5; <br>
+            let str ="" <br>
+            for(let i = 1; i <= n; i++){ <br>
+                for(let j = 1; j <= i ; j++) <br>
+                    { <br>
+                    if (j%2 == 0){ <br>
+                    str = str +"0"; <br>
+                    } <br>
+                    else{ <br>
+                    str = str +"1"; <br>
+                    } <br>
+                    } <br>
+                    str = str +"\n"; <br>
+                    } <br>
+                    console.log(str) <br></p>
 
         <hr>
 
@@ -504,7 +592,23 @@
             K L M N O
         </h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let a = 65; <br>
+
+            let b = String.fromCharCode(79); <br>
+            let str = "" <br>
+            let n = 5; <br>
+            for (let i = 1; i <= n; i++) <br>
+                { <br>
+                for (let j = 1; j <= i;j++){ <br>
+                    let c = String.fromCharCode(a) <br>
+                    str = str+`${c}`; <br>
+                    a++ <br>
+                    } <br>
+                    str = str+"\n"; <br>
+                    } <br>
+                    console.log(str); <br>
+        </p>
 
         <hr>
 
@@ -516,7 +620,20 @@
             11 12 13 14 15
         </h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let a = 1; <br>
+            let n = 5; <br>
+            let str = "" <br>
+            for (let i = 1; i <= n; i++) <br>
+                { <br>
+                for(let j = 1; j <= i; j++){ <br>
+                    str = str+`${a}` <br>
+                    a++; <br>
+                    } <br>
+                    str = str + "\n"; <br>
+                    } <br>
+                    console.log(str); <br>
+                </p>
 
         <hr>
 
@@ -528,38 +645,417 @@
             * * * * *
         </h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let n = 5; <br>
+            let str = "" <br>
+            for(let i = 1; i <= n; i++){ <br>
+                for (let j = 1; j <= i; j++){ <br>
+                    str = str+"*" <br>
+                    } <br>
+                    str = str+"\n"; <br>
+                    } <br>
+                    console.log(str); <br>
+        </p>
 
         <hr>
 
         <h2>Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome?</h2>
     
-        <p><b>Ans =></b></p>
+        <p><b>Ans =></b>
+            let count = 0; <br>
+
+            while(count < 3){ <br>
+                let a = prompt("enter a number"); <br>
+                if(a == Number){ <br>
+
+                let b = a.toString(); <br>
+                let str ="" <br>
+                for(i = b.length-1;i >= 0; i--){ <br>
+                str = str +b[i]; <br>
+                } <br>
+                console.log(str); <br>
+                let c = parseInt(str); <br>
+                if (a == c){ <br>
+                console.log("number is plaindrom"); <br>
+                } <br>
+                else{ <br>
+                console.log("number is not a plaindrom"); <br>
+                } <br>
+                } <br>
+                else{ <br>
+                console.log("not a number") <br>
+                } <br>
+                count++; <br>
+                } <br>
+        </p>
 
         <hr>
 
+        <h2>Q.40 Write a JavaScript Program to display the current day and time in the following
+            format.
+            Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let day = ['sunday','monday','tuseday','wednesday','thursday','friday','saturday']
+            <br>
+            let a = new Date(); <br>
+            let b = day[a.getDay()] <br>
+            let c = a.toLocaleTimeString(); <br>
+            console.log(`Today is ${b}. Current Time is ${c}`); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.41 Write a JavaScript program to get the current date?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let day = new Date() <br>
+            console.log(day); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.42 Write a JavaScript program to compare two objects?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            1. let obj = {name: 'jayesh',subject: 'Wd',salary: '7000000'} <br>
+            let obj2 = {name: 'jayesh',subject: 'Wd',salary: '7000000'} <br>
+            obj = obj2; <br>
+            if(obj == obj2){ <br>
+            <br>console.log("equal"); <br>
+            }else{ <br>
+            console.log("not eqaul"); <br>
+            } <br>
+        </p>
+        <br>
+        <p>
+            2. <br>
+            let obj = {name: 'jayesh',subject: 'Wd',salary: '7000000'}; <br>
+            let obj2 = {name: 'jayesh',subject: 'Wd',salary: '7000000'}; <br>
+            console.log(JSON.stringify(obj) === JSON.stringify(obj2)); <br>
+        </p>
+        <br>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.43 Write a JavaScript program to convert an array of objects into CSV string?</h2>
+        <h3>Ans:-</h3>
+        <p>const obj = [ <br>
+            {name: 'jayesh',subject: 'Wd',salary: 7000000}, <br>
+            {name: 'jayesh',subject: 'Wd',salary: 7000000}, <br>
+            {name: 'jayesh',subject: 'Wd',salary: 7000000 } <br>
+            ]; <br>
+            const obj2 = obj.map((obj) =>`${obj.name},${obj.subject},${obj.salary}`).join(",");
+            <br>
+            console.log(obj2); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.44 Write a JavaScript program to capitalize first letter of a string?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str ='jayeshojha' <br>
+            let a = str[0]; <br>
+            let b = str[0].toUpperCase(); <br>
+            let str2 = str.replace(`${a}`,`${b}`); <br>
+            console.log(str2); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q. 45 Write a JavaScript program to determine if a variable is array?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let a = 3487; <br>
+            let b = [1,2,3,4]; <br>
+            if (Array.isArray(b)){ <br>
+            console.log("varible is an array") <br>
+            } <br>
+            else{ <br>
+            console.log("variable is not an array") <br>
+            } <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.46 Write a JavaScript program to clone an array?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let arr = [1,2,3,4]; <br>
+            let cloned_arr = Array.from(arr); <br>
+            console.log(cloned_arr); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+        </h2>
+        <h3>Ans:-</h3>
 
+            Declaring methods directly in JavaScript objects can have a drawback related to
+            memory efficiency and code organization. When methods are declared directly in
+            objects, a new copy of the method is created for each instance of the object. This
+            can lead to increased memory consumption, especially if there are many instances of
+            the object.
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.48 Print the length of the string on the browser console using console.log()</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = 'topstechnologies'; <br>
+            console.log(str.length) <br>
+        </p>
+        <h2>Q.49 Change all the string characters to capital letters using toUpperCase() method?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = 'topstechnologies'; <br>
+            console.log(str.length); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.49 Change all the string characters to capital letters using toUpperCase() method?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = "jhfgbvz"; <br>
+            console.log(str.toUpperCase()); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.50 What is the drawback of declaring methods directly in JavaScript objects?
+        </h2>
+        <h3>Ans:-</h3>
 
-
-        <h2>(Array and object Question)</h2>
-        
-        
-        
-        
-        
-        
-        <h2>(Create program Question)</h2>
-
+            Declaring methods directly in JavaScript objects can have a drawback related to
+            memory efficiency and code organization. When methods are declared directly in
+            objects, a new copy of the method is created for each instance of the object. This
+            can lead to increased memory consumption, especially if there are many instances of
+            the object.
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.51 Write a JavaScript program to get the current date. Expected Output :
+            mm-dd-yyyy,
+            mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let day = new Date() <br>
+            console.log(day); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days
+            Of
+            JavaScript?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = 'javascript';<br>
+            console.log(str.indexOf('a')); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q,53 Use lastIndexOf to determine the position of the last occurrence of a in 30
+            Days Of
+            JavaScript?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = 'javascript'; <br>
+            console.log(str.lastIndexOf('a')); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.54 Form Validtion in JS?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            It is important to validate the form submitted by the user because it can have
+            inappropriate values. So, validation is must to authenticate user.
+        </p>
+        <p>
+            JavaScript provides facility to validate the form on the client-side so data
+            processing will be faster than server-side validation. Most of the web developers
+            prefer JavaScript form validation.
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.55 Form in Email, number, Password, Validation?</h2>
+        <h3>Ans:-</h3>
+        <form action="" method="get" id="Form" onsubmit="return validateForm()">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <span id="emailerror"></span>
+            <label for="number">Number</label>
+            <input type="tel" name="number" id="number">
+            <span id="numbererror"></span>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <span id="passworderror"></span>
+            <input type="submit" value="submit"">
+        </form>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.56 Dynamic Form Validation in JS?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            Dynamic form validation in JavaScript involves checking and validating user input as it's entered into form fields, typically within a web browser. This ensures that the data entered meets certain criteria or constraints before it is submitted to the server. 
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.57 how many type of JS Event? How to use it ?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            basicaly there are four types of events :-
+        </p>
+        <ul>
+            <li>Mouse event</li>
+            <li>Keyboard event</li>
+            <li>Form event</li>
+            <li>Window event</li>
+        </ul>
+        <p>
+            JavaScript events are actions or occurrences that happen in the browser, and we can use them to trigger your JavaScript code. 
+        </p>
+        <h2>Q.59 What is Bom vs Dom in JS?</h2>
+        <h3>Ans:-</h3>
+          <h4>Bom (Browser object model):-</h4>
+          <ul>
+            <li>It mainly focuses on browser-specific functionality. </li>
+            <li>It allows JavaScript to interact with browser features beyond the scope of manipulating the document structure.</li>
+            <li>In this case, the window object will be created automatically by the browser.</li>
+            <li>It doesn’t have any access to the content of the web document directly.</li>
+          </ul>
+          <br>
+          <h4>Dom(Document object model):-</h4>
+           <ul>
+            <li>It mainly focuses on the structure of the displayed document.</li>
+            <li>It facilitates a standardized interface to access and modify the elements and content of an HTML or XML document.</li>
+            <li>When an HTML document gets loaded in the browser, then it becomes a document object.</li>
+            <li>It provides direct access control to the content of the web document, along with permitting the traversal and modification of its elements and attributes.</li>
+           </ul>
+           <hr>
+           <hr>
+           <hr>
+           <hr>
+           <h2>Q.60 Array vs object defences in JS?
+        </h2>
+        <h3>Ans:-</h3>
+        <h4>Object:-</h4>
+        <p>
+            Objects are used to represent a “thing” in your code. That could be a person, a car, a building, a book, a character in a game — basically anything that is made up or can be defined by a set of characteristics. In objects, these characteristics are called properties that consist of a key and a value.
+        </p>
+        <p>
+            for exa:- <br>
+            var person = { <br>
+                name: 'jayesh', <br>
+                age: 21, <br>
+                likesCoding: true <br>
+              }; <br>
+        </p>
+        <h4>Array:-</h4>
+        <p>
+            An Array is a collection of data and a data structure that is stored in a sequence of memory locations. One can access the elements of an array by calling the index number such as 0, 1, 2, 3, …, etc. The array can store data types like Integer, Float, String, and Boolean all the primitive data types can be stored in an array.
+        </p>
+        <p>
+            for example:- <br>
+                       let array = [2,4,5,4,6,7]; <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.61 Split the string into an array using split() Method? </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str ='223 399 459' <br>
+            let arr = str.split(' '); <br>
+            console.log(arr); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.62 Check if the string contains a word Script using includes() method?
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let arr = ['jay','om','vinay','hritik'] <br>
+            console.log(arr.includes(" jay")); <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.63 Change all the string characters to lowercase letters using toLowerCase() Method</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = "jayesh" <br>
+            console.log(str.toLowerCase()) <br>
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.64 What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt() method.
+        </h2>
+        <h3>Ans:-</h3>
+        <p>
+            let str = '30 Days of JavaScript';
+            console.log(str.charAt(15));
+        </p>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <h2>Q.65 copy to one string to another string in JS?</h2>
+        <h3>Ans:-</h3>
+        <p>
+            let originalString = "HelloWorld"; <br>
+            let copiedString = originalString; <br>
+        </p>
+        <hr>
+    
         <h3>Create a hide show password functionalities.</h3>
-
         <p><b>Ans =></b>
-            <div class="inputs">
-                <input type="password" name="" id="inp1"  value="">
-                <input type="checkbox" name="" onclick="test()">hide & Show
-            </div>
-            <pre>
-                function test(){
-                    let inp1 = document.getElementById('inp1')   
+        <div class="inputs">
+            <input type="password" name="" id="inp1"  value="">
+            <input type="checkbox" name="" onclick="test()">hide & Show
+        </div>
+        <pre>
+            function test(){
+                let inp1 = document.getElementById('inp1')   
     
                     if (inp1.type === "password") {
                     inp1.type = "text";
@@ -571,11 +1067,9 @@
                 }
             </pre>
         </p>
-
         <hr>
 
-        <h3>Create basic math operation in JS</h3>
-
+        <h2>Create basic math operation in JS</h2>
         <p><b>Ans =></b> 
             <div class="calulater">
                 <h3>Calculater & Math Operation</h3>
@@ -598,12 +1092,11 @@
                     </div>
                 </div>
             </div>
-            <pre>
+        <pre>
                 let inp11 = document.getElementById('inp11')
                 let inp22 = document.getElementById('inp22')
                 let res = document.getElementById('res')
             
-                
             function add(){
                 res.innerHTML = parseInt(inp11.value) + parseInt(inp22.value);
                 console.log(res)   
@@ -624,87 +1117,92 @@
                 res.innerHTML= parseInt(inp11.value) % parseInt(inp22.value);
                 console.log(res)   
             }
-            </pre>
-
+        </pre>
         </p>
-
         <hr>
 
         <h3>Create result</h3>
-
         <p><b>Ans =></b> 
-            <div class="result">
-                <h3>Marksheet  for information Technology</h3>
-                <h4>Enter Mark</h4>
-                <div class="div">
-                    <div class="box-1">
-                        <label for="">1. C language</label>
-                        <input type="number" id="c">
-                    </div>
-                    <div class="box-2">
-                        <label for="">2. C++ language</label>
-                        <input type="number" id="cplus">
-                    </div>
-                    <div class="box-3">
-                        <label for="">3. Database</label>
-                        <input type="number" id="database">
-                    </div>
-                    <div class="box-4">
-                        <label for="">4. HTML</label>
-                        <input type="number" id="html">
-                    </div>
-                    <div class="box-5">
-                        <label for="">5. CSS</label>
-                        <input type="number" id="css">
-                    </div>
-                    <div class="box-6">
-                        <label for="">6. Php</label>
-                        <input type="number" id="php">
-                    </div>
-                    <div class="box-7">
-                        <label for="">7. Core Java</label>
-                        <input type="number" id="java">
-                    </div>
+        <div class="result">
+            <h3>Marksheet  for information Technology</h3>
+            <h4>Enter Mark</h4>
+            <div class="div">
+                <div class="box-1">
+                    <label for="">1. C language</label>
+                    <input type="number" id="c">
                 </div>
-                <button id="resbtn" onclick="result()">Result</button>
-                <div class="div-1">
+                <div class="box-2">
+                    <label for="">2. C++ language</label>
+                    <input type="number" id="cplus">
+                </div>
+                <div class="box-3">
+                    <label for="">3. Database</label>
+                    <input type="number" id="database">
+                </div>
+                <div class="box-4">
+                    <label for="">4. HTML</label>
+                    <input type="number" id="html">
+                </div>
+                <div class="box-5">
+                    <label for="">5. CSS</label>
+                    <input type="number" id="css">
+                </div>
+                <div class="box-6">
+                    <label for="">6. Php</label>
+                    <input type="number" id="php">
+                </div>
+                <div class="box-7">
+                    <label for="">7. Core Java</label>
+                    <input type="number" id="java">
+                </div>
+            </div>
+            <button id="resbtn" onclick="result()">Result</button>
+            <div class="div-1">
                     <h4 id="res"></h4>
                     <h4 id="per"></h4>
 
-                </div>
             </div>
+        </div>
 
-        </p>
+            <!-- javascript code  -->
+
+        <pre>
+            let c = document.getElementById('c');
+            let cplus = document.getElementById('cplus');
+            let database = document.getElementById('database');
+            let html = document.getElementById('html');
+            let css = document.getElementById('css');
+            let php = document.getElementById('php');
+            let java = document.getElementById('java');
+            let resbtn = document.getElementById('resbtn');
+            let res = document.getElementById('res');
+            let per = document.getElementById('per');
+ 
+            function result(){
+ 
+             let res2 = parseInt(c.value) + parseInt(cplus.value) + parseInt(database.value) + parseInt(html.value)
+                   + parseInt(css.value) + parseInt(php.value) + parseInt(java.value);
+ 
+             console.log("Here",  res2)
+             let per2 = parseInt(res2) / 7 ;
+ 
+             res.innerHTML = `Total is : ${res2}/350`
+             per.innerHTML = `Percentage is : ${per2}%`
+             console.log(res);
+             console.log(per);
+            }
+        </pre>
+    </p>
+
+
+
+
+
+
+
 
     <script>
-           let c = document.getElementById('c');
-           let cplus = document.getElementById('cplus');
-           let database = document.getElementById('database');
-           let html = document.getElementById('html');
-           let css = document.getElementById('css');
-           let php = document.getElementById('php');
-           let java = document.getElementById('java');
-           let resbtn = document.getElementById('resbtn');
-           let res = document.getElementById('res');
-           let per = document.getElementById('per');
-
-         
-
-           function result(){
-
-            let res2 = parseInt(c.value) + parseInt(cplus.value) + parseInt(database.value) + parseInt(html.value)
-                  + parseInt(css.value) + parseInt(php.value) + parseInt(java.value);
-
-           console.log("Here",  res2)
-
-            let per2 = parseInt(res2) / 7 ;
-
-            res.innerHTML = `Total is : ${res2}/350`
-            per.innerHTML = `Percentage is : ${per2}%`
-            console.log(res);
-            console.log(per);
-           }
-
+          
            
         
     </script>
